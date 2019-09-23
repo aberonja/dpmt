@@ -909,6 +909,13 @@
     semver "6.3.0"
     semver-intersect "1.4.0"
 
+"@stencil/core@^1.4.0":
+  version "1.4.0"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/@stencil/core/-/core-1.4.0.tgz#309dbbb9470ed735b642397c12dd082c94e070fc"
+  integrity sha1-MJ27uUcO1zW2Qjl8Et0ILJTgcPw=
+  dependencies:
+    typescript "3.6.2"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -978,6 +985,15 @@
     "@types/node" "*"
     "@types/source-list-map" "*"
     source-map "^0.6.1"
+
+"@uefa/design-system@^1.2.5":
+  version "1.2.5"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/@uefa/design-system/-/design-system-1.2.5.tgz#c566eeec539d24b73dbd9e869948812888788aff"
+  integrity sha1-xWbu7FOdJLc9vZ6GmUiBKIh4iv8=
+  dependencies:
+    "@stencil/core" "^1.4.0"
+    css-vars-ponyfill "^2.1.2"
+    stencil-click-outside "^1.5.0"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -2485,6 +2501,11 @@ css-selector-tokenizer@^0.7.1:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css-vars-ponyfill@^2.1.2:
+  version "2.1.2"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/css-vars-ponyfill/-/css-vars-ponyfill-2.1.2.tgz#0de2e49e72a6bac09cb456a0325c8584cadaecd2"
+  integrity sha1-DeLknnKmusCctFagMlyFhMra7NI=
 
 cssauron@^1.4.0:
   version "1.4.0"
@@ -6882,6 +6903,11 @@ static-extend@^0.1.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
+stencil-click-outside@^1.5.0:
+  version "1.5.0"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/stencil-click-outside/-/stencil-click-outside-1.5.0.tgz#b51f9c50f50368af2033477fe811756906d2c073"
+  integrity sha1-tR+cUPUDaK8gM0d/6BF1aQbSwHM=
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
@@ -7317,6 +7343,11 @@ typescript@3.5.3, typescript@~3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
   integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
+
+typescript@3.6.2:
+  version "3.6.2"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/typescript/-/typescript-3.6.2.tgz#105b0f1934119dde543ac8eb71af3a91009efe54"
+  integrity sha1-EFsPGTQRnd5UOsjrca86kQCe/lQ=
 
 uglify-js@^3.1.4:
   version "3.6.0"
