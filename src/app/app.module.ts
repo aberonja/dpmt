@@ -2,7 +2,6 @@ import { ProjectsModule } from './projects/projects.module';
 import { TemplatesModule } from './templates/templates.module';
 import { ItemsModule } from './items/items.module';
 import { TopHeaderComponent } from './shared/top-header/top-header.component';
-import { SharedModule } from '@uefa-dptm/shared/shared.module';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
