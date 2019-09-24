@@ -1,0 +1,26 @@
+header {
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  .header {
+    img {
+      width: 80px;
+    }
+
+    span {
+      font-size: x-large;
+    }
+  }
+
+  .header-block {
+    flex-basis: 50%;
+  }
+
+  .logo-block {
+    flex: 0 0 35%;
+  }
+
+}
