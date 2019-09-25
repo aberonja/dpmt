@@ -1,8 +1,8 @@
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ItemsComponent } from './items.component';
+import { ItemsComponent } from './containers/items.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   imports: [
@@ -14,6 +14,7 @@ import { ItemsComponent } from './items.component';
       }
     ])
   ],
-  declarations: [ItemsComponent]
+  declarations: [ItemsComponent, SearchComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ItemsModule {}
