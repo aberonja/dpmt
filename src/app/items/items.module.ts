@@ -1,8 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
-import { ItemsComponent } from './containers/items.component';
 import { SearchComponent } from './components/search/search.component';
+import { ItemsComponent } from './containers/items.component';
 
 @NgModule({
   imports: [
