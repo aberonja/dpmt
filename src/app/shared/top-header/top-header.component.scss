@@ -24,7 +24,8 @@ header {
       left: 0;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
 
       &:after,
       &:before {
