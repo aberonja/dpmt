@@ -1,3 +1,7 @@
+import { ProjectsModule } from './projects/projects.module';
+import { TemplatesModule } from './templates/templates.module';
+import { ItemsModule } from './items/items.module';
+import { TopHeaderComponent } from './shared/top-header/top-header.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
@@ -12,12 +16,15 @@ import { CommonService } from './core/common.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, NotFoundComponent],
+  declarations: [AppComponent, NotFoundComponent, TopHeaderComponent],
   imports: [
     BrowserModule,
     UsersModule,
     VenuesModule,
     ClubsModule,
+    ItemsModule,
+    TemplatesModule,
+    ProjectsModule,
     AppRoutingModule,
     StoreModule.forRoot({ router: routerReducer }),
     StoreRouterConnectingModule.forRoot(),

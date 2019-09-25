@@ -1,0 +1,56 @@
+header {
+  color: white;
+
+  nav a {
+    color: white;
+    position: relative;
+
+    &:after,
+    &:before {
+      content: '';
+      transition: .2s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      visibility: hidden;
+      border: 1px solid;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:hover,
+    &.active {
+
+      &:after,
+      &:before {
+        width: 50%;
+        visibility: visible;
+      }
+    }
+  }
+
+  .header {
+    img {
+      width: 80px;
+    }
+
+    span {
+      font-size: x-large;
+    }
+  }
+
+  .header-block {
+    flex-basis: 50%;
+  }
+
+  .logo-block {
+    flex: 0 0 35%;
+  }
+
+}

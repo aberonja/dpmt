@@ -4,7 +4,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '404', component: NotFoundComponent },
-  { pathMatch: 'full', path: '', redirectTo: '/users' },
+  { pathMatch: 'full', path: '', redirectTo: '/items' },
   { path: '**', redirectTo: '/404' }
 ];
 
