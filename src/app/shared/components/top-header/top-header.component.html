@@ -37,5 +37,5 @@
       </div>
     </div>
   </div>
-  <ds-page-header page-title="Accreditations"></ds-page-header>
+  <ds-page-header [pageTitle]="(routeUrl$ | async) | urlFormatter | capitalize"></ds-page-header>
 </header>
