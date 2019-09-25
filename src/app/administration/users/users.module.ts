@@ -1,13 +1,18 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
 import { UsersComponent } from './container/users.component';
-import { UsersRoutingModule } from './users-routing.module';
 
 @NgModule({
   imports: [
     SharedModule,
-    UsersRoutingModule,
+    RouterModule.forChild([
+      {
+        path: 'users',
+        component: UsersComponent
+      }
+    ]),
     StoreModule.forFeature('users', {})
   ],
   declarations: [UsersComponent]

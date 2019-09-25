@@ -1,8 +1,37 @@
 header {
   color: white;
 
-  a {
+  nav a {
     color: white;
+    position: relative;
+
+    &:after,
+    &:before {
+      content: '';
+      transition: .2s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      visibility: hidden;
+      border: 1px solid;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:hover {
+
+      &:after,
+      &:before {
+        width: 50%;
+        visibility: visible;
+      }
+    }
   }
 
   .header {
