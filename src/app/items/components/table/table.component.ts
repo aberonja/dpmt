@@ -14,9 +14,6 @@ export class TableComponent {
     {
       id: 1,
       checked: false,
-      someValue: '21',
-      third: 'here',
-      otherValue: '42',
     },
     {
       id: 2,
