@@ -4,7 +4,8 @@ import { ISidePanelState } from './side-panel.model';
 
 const initialState: ISidePanelState = {
   isOpen: false,
-  type: undefined
+  type: null,
+  id: null
 };
 
 export const sidePanelReducer = createReducer(
@@ -15,9 +16,5 @@ export const sidePanelReducer = createReducer(
     type,
     id
   })),
-  on(CloseSidePanel, () => ({
-    isOpen: false,
-    type: undefined,
-    id: undefined
-  }))
+  on(CloseSidePanel, () => initialState)
 );
