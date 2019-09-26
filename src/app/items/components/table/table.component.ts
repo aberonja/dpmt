@@ -6,19 +6,19 @@ import { ISidePanelState } from '@uefa-dptm/shared/components/side-panel/state/s
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
   isFetching: boolean = false;
   items = [
     {
       id: 1,
-      checked: false
+      checked: false,
     },
     {
       id: 2,
-      checked: false
-    }
+      checked: false,
+    },
   ];
 
   constructor(private _store: Store<{ sidePanel: ISidePanelState }>) {}
