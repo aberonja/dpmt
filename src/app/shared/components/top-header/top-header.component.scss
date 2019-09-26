@@ -8,7 +8,7 @@ header {
     &:after,
     &:before {
       content: '';
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
       position: absolute;
       bottom: 0;
       width: 0;
@@ -26,7 +26,6 @@ header {
 
     &:hover,
     &.active {
-
       &:after,
       &:before {
         width: 50%;
@@ -53,4 +52,11 @@ header {
     flex: 0 0 35%;
   }
 
+  ds-icon {
+    transition: 0.2s transform ease-in-out;
+
+    &.menu-open {
+      transform: rotate(180deg);
+    }
+  }
 }

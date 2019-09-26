@@ -119,6 +119,15 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@~8.2.1":
+  version "8.2.1"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/@angular/cdk/-/cdk-8.2.1.tgz#3dc2648fe8255098940c9f9a16a271f422571d51"
+  integrity sha1-PcJkj+glUJiUDJ+aFqJx9CJXHVE=
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~8.3.0":
   version "8.3.6"
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/@angular/cli/-/cli-8.3.6.tgz#dbbfef581b10bdc9a255c71d304676743b947cd4"
@@ -199,6 +208,13 @@
   version "8.2.8"
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/@angular/language-service/-/language-service-8.2.8.tgz#0fb464962423f420b7dbbb442e9458cfdbae2236"
   integrity sha1-D7RkliQj9CC327tELpRYz9uuIjY=
+
+"@angular/material@^8.2.1":
+  version "8.2.1"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/@angular/material/-/material-8.2.1.tgz#d57575715c0659a713c0eb9e65292e46923ad28d"
+  integrity sha1-1XV1cVwGWacTwOueZSkuRpI60o0=
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~8.2.3":
   version "8.2.8"
@@ -3622,6 +3638,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/graceful-fs/-/graceful-fs-4.2.2.tgz#6f0952605d0140c1cfdb138ed005775b92d67b02"
   integrity sha1-bwlSYF0BQMHP2xOO0AV3W5LWewI=
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
@@ -5744,6 +5765,11 @@ parse5@4.0.0:
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha1-bXhlbj2o14tOwLkG98CO8d/j9gg=
 
+parse5@^5.0.0:
+  version "5.1.0"
+  resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
+  integrity sha1-xZNByXI/QUxFKXVWTHwApo1YrNI=
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/parseqs/-/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -7525,7 +7551,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@1.10.0, tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@1.10.0, tslib@^1.10.0, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://uefa.pkgs.visualstudio.com/_packaging/UEFA.Design.System/npm/registry/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=

@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { MatMenuModule } from '@angular/material/menu';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -29,6 +31,7 @@ import { TemplatesModule } from './templates/templates.module';
     ModalComponent,
   ],
   imports: [
+    MatMenuModule,
     BrowserModule,
     HttpModule,
     UsersModule,
@@ -42,6 +45,7 @@ import { TemplatesModule } from './templates/templates.module';
     StoreModule.forRoot(reducers),
     StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument(),
+    BrowserAnimationsModule,
   ],
   providers: [CommonService],
   bootstrap: [AppComponent],
