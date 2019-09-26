@@ -1,7 +1,7 @@
-import { Component } from '@angular/core'
-import { Store } from '@ngrx/store'
-import { OpenSidePanel } from '@uefa-dptm/shared/components/side-panel/state/side-panel.actions'
-import { ISidePanelState } from '@uefa-dptm/shared/components/side-panel/state/side-panel.model'
+import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { OpenSidePanel } from '@uefa-dptm/shared/components/side-panel/state/side-panel.actions';
+import { ISidePanelState } from '@uefa-dptm/shared/components/side-panel/state/side-panel.model';
 
 @Component({
   selector: 'app-table',
@@ -9,7 +9,7 @@ import { ISidePanelState } from '@uefa-dptm/shared/components/side-panel/state/s
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
-  isFetching: boolean = false
+  isFetching: boolean = false;
   items = [
     {
       id: 1,
@@ -19,11 +19,11 @@ export class TableComponent {
       id: 2,
       checked: false,
     },
-  ]
+  ];
 
   constructor(private _store: Store<{ sidePanel: ISidePanelState }>) {}
 
   openSidePanel(id: number) {
-    this._store.dispatch(OpenSidePanel({ payload: { type: 'item', id } }))
+    this._store.dispatch(OpenSidePanel({ payload: { type: 'item', id } }));
   }
 }
