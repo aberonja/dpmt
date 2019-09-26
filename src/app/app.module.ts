@@ -1,4 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -18,6 +19,7 @@ import { SidePanelComponent } from './shared/components/side-panel/side-panel.co
 import { TopHeaderComponent } from './shared/components/top-header/top-header.component';
 import { TemplatesModule } from './templates/templates.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { TemplatesModule } from './templates/templates.module';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     UsersModule,
     VenuesModule,
     ClubsModule,
