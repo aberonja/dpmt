@@ -32,7 +32,7 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.isOpen = true;
   }
 
-  onDialogCancel(ev: UIEvent) {
+  onDialogCancel() {
     this._store.dispatch(CloseModal());
   }
 }
