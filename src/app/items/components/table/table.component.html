@@ -38,7 +38,7 @@
   </ds-table-header>
 
   <ds-table-body [loading]="false">
-    <ds-table-row *ngFor="let item of items">
+    <ds-table-row *ngFor="let item of items" (click)="openSidePanel(item.id)">
       <ds-table-cell column-key="index" class="pr-0">
         <ds-checkbox
           name="{{ item.id }}"

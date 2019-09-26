@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { OpenSidePanel } from '@uefa-dptm/shared/components/side-panel/state/side-panel.actions';
+import { ISidePanelState } from '@uefa-dptm/shared/components/side-panel/state/side-panel.model';
 
 @Component({
   selector: 'app-table',
@@ -18,5 +21,9 @@ export class TableComponent {
     }
   ];
 
-  constructor() {}
+  constructor(private _store: Store<{ sidePanel: ISidePanelState }>) {}
+
+  openSidePanel(id: number) {
+    this._store.dispatch(OpenSidePanel({ payload: { type: 'item', id } }));
+  }
 }

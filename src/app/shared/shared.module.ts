@@ -7,6 +7,12 @@ import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
 @NgModule({
   declarations: [UrlFormatterPipe, CapitalizePipe],
   imports: [CommonModule],
-  exports: [CommonModule, FormsModule, ReactiveFormsModule, UrlFormatterPipe, CapitalizePipe],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    UrlFormatterPipe,
+    CapitalizePipe
+  ]
 })
 export class SharedModule {}
