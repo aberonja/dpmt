@@ -11,44 +11,12 @@ export class TableComponent {
   public items = [
     {
       id: 1,
-      checked: false
+      checked: false,
     },
     {
       id: 2,
-      checked: false
+      checked: false,
     },
-    {
-      id: 3,
-      checked: false
-    },
-    {
-      id: 4,
-      checked: false
-    },
-    {
-      id: 5,
-      checked: false
-    },
-    {
-      id: 6,
-      checked: false
-    },
-    {
-      id: 3,
-      checked: false
-    },
-    {
-      id: 3,
-      checked: false
-    },
-    {
-      id: 3,
-      checked: false
-    },
-    {
-      id: 3,
-      checked: false
-    }
   ];
 
   constructor() {}
