@@ -17,7 +17,41 @@
         <a class="mr-4" routerLink="/projects" routerLinkActive="active"
           >Projects</a
         >
-        <a>Administration</a>
+        <div class="d-flex">
+          <span
+            class="cursor-pointer"
+            [matMenuTriggerFor]="appMenu"
+            #matMenu="matMenuTrigger"
+            >Administration</span
+          >
+          <ds-icon
+            [class.menu-open]="matMenu.menuOpen"
+            name="navigation-triangle-down"
+            color="neutral-0"
+          ></ds-icon>
+        </div>
+        <mat-menu #appMenu="matMenu">
+          <div class="mat-menu">
+            <a
+              class="p-12 pt-8 d-block"
+              routerLink="/users"
+              routerLinkActive="active"
+              >Users</a
+            >
+            <a
+              class="p-12 d-block"
+              routerLink="/clubs"
+              routerLinkActive="active"
+              >Clubs</a
+            >
+            <a
+              class="p-12 pb-8 d-block"
+              routerLink="/venues"
+              routerLinkActive="active"
+              >Venues</a
+            >
+          </div>
+        </mat-menu>
       </nav>
     </div>
     <div class="header-block d-flex justify-content-end">
@@ -37,5 +71,7 @@
       </div>
     </div>
   </div>
-  <ds-page-header [pageTitle]="(routeUrl$ | async) | urlFormatter | capitalize"></ds-page-header>
+  <ds-page-header
+    [pageTitle]="routeUrl$ | async | urlFormatter | capitalize"
+  ></ds-page-header>
 </header>
