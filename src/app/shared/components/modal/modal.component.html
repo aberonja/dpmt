@@ -1,0 +1,14 @@
+<ds-dialog
+  type="default"
+  heading="Review agreement"
+  primary-action="Review"
+  secondary-action="Cancel"
+  [isOpen]="isOpen"
+  [confirmLoading]="isProcessing"
+  (onCancel)="onDialogCancel()"
+>
+  <p>
+    One more thing… you just need to review and accept the agreement to
+    officialy become a volunteer.
+  </p>
+</ds-dialog>
