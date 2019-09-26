@@ -6,17 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
-  public isFetching: boolean = false;
-
-  public items = [
+  isFetching: boolean = false;
+  items = [
     {
       id: 1,
-      checked: false,
+      checked: false
     },
     {
       id: 2,
-      checked: false,
-    },
+      checked: false
+    }
   ];
 
   constructor() {}
