@@ -19,7 +19,6 @@ import { SidePanelComponent } from './shared/components/side-panel/side-panel.co
 import { TopHeaderComponent } from './shared/components/top-header/top-header.component';
 import { TemplatesModule } from './templates/templates.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
