@@ -1,4 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -16,10 +17,12 @@ import { ProjectsModule } from './projects/projects.module';
 import { TopHeaderComponent } from './shared/components/top-header/top-header.component';
 import { TemplatesModule } from './templates/templates.module';
 
+
 @NgModule({
   declarations: [AppComponent, NotFoundComponent, TopHeaderComponent],
   imports: [
     BrowserModule,
+    HttpModule,
     UsersModule,
     VenuesModule,
     ClubsModule,
