@@ -18,13 +18,15 @@ import { ProjectsModule } from './projects/projects.module';
 import { SidePanelComponent } from './shared/components/side-panel/side-panel.component';
 import { TopHeaderComponent } from './shared/components/top-header/top-header.component';
 import { TemplatesModule } from './templates/templates.module';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
     TopHeaderComponent,
-    SidePanelComponent
+    SidePanelComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,10 +41,10 @@ import { TemplatesModule } from './templates/templates.module';
     SharedModule,
     StoreModule.forRoot(reducers),
     StoreRouterConnectingModule.forRoot(),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [CommonService],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
