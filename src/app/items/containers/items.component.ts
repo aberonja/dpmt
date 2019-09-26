@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { OpenModal } from '@uefa-dptm/modal/state/modal.actions';
-import { IModalState } from '@uefa-dptm/modal/state/modal.model';
+import { OpenModal } from '@uefa-dptm/shared/components/modal/state/modal.actions';
+import { IModalState } from '@uefa-dptm/shared/components/modal/state/modal.model';
 
 @Component({
   selector: 'app-items',

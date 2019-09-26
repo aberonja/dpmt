@@ -15,10 +15,10 @@ import { CommonService } from './core/common.service';
 import { ItemsModule } from './items/items.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProjectsModule } from './projects/projects.module';
+import { ModalComponent } from './shared/components/modal/modal.component';
 import { SidePanelComponent } from './shared/components/side-panel/side-panel.component';
 import { TopHeaderComponent } from './shared/components/top-header/top-header.component';
 import { TemplatesModule } from './templates/templates.module';
-import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
