@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-top-header',
   templateUrl: './top-header.component.html',
-  styleUrls: ['./top-header.component.scss']
+  styleUrls: ['./top-header.component.scss'],
 })
 export class TopHeaderComponent implements OnInit {
   routeUrl$: Observable<string>;
