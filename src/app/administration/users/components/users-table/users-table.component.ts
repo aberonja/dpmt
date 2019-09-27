@@ -19,6 +19,38 @@ export class UsersTableComponent {
       id: 32,
       checked: false,
     },
+    {
+      id: 33,
+      checked: false,
+    },
+    {
+      id: 34,
+      checked: false,
+    },
+    {
+      id: 35,
+      checked: false,
+    },
+    {
+      id: 44,
+      checked: false,
+    },
+    {
+      id: 42,
+      checked: false,
+    },
+    {
+      id: 331,
+      checked: false,
+    },
+    {
+      id: 31231,
+      checked: false,
+    },
+    {
+      id: 414141,
+      checked: false,
+    },
   ];
 
   constructor(private _store: Store<{ sidePanel: ISidePanelState }>) {}

@@ -1,76 +1,119 @@
-<ds-table>
+<ds-table class="mb-40">
   <ds-table-header>
     <ds-table-row>
-      <ds-table-header-col column-key="index" width="40" class="pr-0">
-        <ds-checkbox
-          name="all"
-          [checked]="false"
-          [indeterminate]="false"
-        ></ds-checkbox>
+      <ds-table-header-col column-key="admin" width="6" flexible="true">
+        <span class="table-header">Admin</span>
       </ds-table-header-col>
-      <ds-table-header-col column-key="empty" width="5" flexible="true">
+      <ds-table-header-col column-key="external" width="6" flexible="true">
+        <span class="table-header">External</span>
       </ds-table-header-col>
-      <ds-table-header-col column-key="id" width="10" flexible="true">
-        Id
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="status"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="table-header">Status</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
       </ds-table-header-col>
-      <ds-table-header-col column-key="itemName" width="25" flexible="true">
-        Item name
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="name"
+        width="28"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="table-header">Name</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
       </ds-table-header-col>
-      <ds-table-header-col column-key="status" width="10" flexible="true">
-        Status
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="organization"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="table-header">Organization</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
       </ds-table-header-col>
-      <ds-table-header-col column-key="briefer" width="10" flexible="true">
-        Briefer
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="email"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="table-header">Email</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
       </ds-table-header-col>
-      <ds-table-header-col column-key="process" width="10" flexible="true">
-        Process
-      </ds-table-header-col>
-      <ds-table-header-col column-key="category" width="10" flexible="true">
-        Category
-      </ds-table-header-col>
-      <ds-table-header-col column-key="venue" width="10" flexible="true">
-        Venue
-      </ds-table-header-col>
-      <ds-table-header-col column-key="deadline" width="10" flexible="true">
-        Deadline
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="phone"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="table-header">Phone</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
       </ds-table-header-col>
     </ds-table-row>
   </ds-table-header>
   <ds-table-body [loading]="false">
     <ds-table-row *ngFor="let item of items" (click)="openSidePanel(item.id)">
-      <ds-table-cell column-key="index" class="pr-0">
-        <ds-checkbox
-          name="{{ item.id }}"
-          value="{{ item.id }}"
-          [checked]="item.checked"
-        ></ds-checkbox>
+      <ds-table-cell
+        column-key="admin"
+        class="d-flex justify-content-center align-items-center"
+      >
+        <div class="d-flex justify-content-center align-items-center">
+          <ds-checkbox
+            name="{{ item.id }}"
+            value="{{ item.id }}"
+            [checked]="item.checked"
+          ></ds-checkbox>
+        </div>
       </ds-table-cell>
-      <ds-table-cell column-key="empty">
-        <span class="small"></span>
-      </ds-table-cell>
-      <ds-table-cell column-key="id">
-        <span class="small">253305</span>
-      </ds-table-cell>
-      <ds-table-cell column-key="itemName">
-        <span class="small">Entrance stadium map</span>
+      <ds-table-cell
+        column-key="external"
+        class="d-flex justify-content-center align-items-center"
+      >
+        <div class="d-flex justify-content-center align-items-center">
+          <ds-checkbox
+            name="{{ item.id }}"
+            value="{{ item.id }}"
+            [checked]="item.checked"
+          ></ds-checkbox>
+        </div>
       </ds-table-cell>
       <ds-table-cell column-key="status">
-        <span class="small">New item</span>
+        <span class="small">Active</span>
       </ds-table-cell>
-      <ds-table-cell column-key="briefer">
-        <span class="small">Mat Jones</span>
+      <ds-table-cell column-key="name">
+        <span class="small">Emma Watson</span>
       </ds-table-cell>
-      <ds-table-cell column-key="process">
+      <ds-table-cell column-key="organization">
+        <span class="small">UEFA</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="email">
         <span class="small">Brief</span>
       </ds-table-cell>
-      <ds-table-cell column-key="category">
-        <span class="small">Maps</span>
-      </ds-table-cell>
-      <ds-table-cell column-key="venue">
-        <span class="small">Camp Nou</span>
-      </ds-table-cell>
-      <ds-table-cell column-key="deadline">
-        <span class="small">05.10.2021</span>
+      <ds-table-cell column-key="phone">
+        <span class="small">00 41 340 67 89</span>
       </ds-table-cell>
     </ds-table-row>
   </ds-table-body>
