@@ -16,7 +16,7 @@ export class UsersTableComponent {
       checked: false,
     },
     {
-      id: 32,
+      id: 31,
       checked: false,
     },
   ];
