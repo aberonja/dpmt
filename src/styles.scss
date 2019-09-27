@@ -28,10 +28,6 @@ body {
   }
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 // makes auto injected child element 100% width of the parrent (table) instead of its content width
 .carrot-holder .sc-ds-table-header-col {
   width: 100%;
