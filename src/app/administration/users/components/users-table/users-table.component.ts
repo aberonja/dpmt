@@ -24,6 +24,6 @@ export class UsersTableComponent {
   constructor(private _store: Store<{ sidePanel: ISidePanelState }>) {}
 
   openSidePanel(id: number) {
-    this._store.dispatch(OpenSidePanel({ payload: { type: 'item', id } }));
+    this._store.dispatch(OpenSidePanel({ payload: { type: 'userEdit', id } }));
   }
 }

@@ -4,4 +4,23 @@
   heading="Test heading"
   text="Test text"
   (onClose)="onSidePanelClose()"
-></ds-side-panel>
+>
+  <div [ngSwitch]="sidePanelType">
+    <app-user-edit *ngSwitchCase="'userEdit'" [id]="id"></app-user-edit>
+    <app-club-create *ngSwitchCase="'clubCreate'"></app-club-create>
+    <app-club-edit *ngSwitchCase="'clubEdit'" [id]="id"></app-club-edit>
+    <app-material-create *ngSwitchCase="'materialCreate'"></app-material-create>
+    <app-material-edit
+      *ngSwitchCase="'materialEdit'"
+      [id]="id"
+    ></app-material-edit>
+    <app-category-create *ngSwitchCase="'categoryCreate'"></app-category-create>
+    <app-category-edit
+      *ngSwitchCase="'categoryEdit'"
+      [id]="id"
+    ></app-category-edit>
+    <app-venue-create *ngSwitchCase="'venueCreate'"></app-venue-create>
+    <app-venue-edit *ngSwitchCase="'venueEdit'" [id]="id"></app-venue-edit>
+    <div *ngSwitchDefault>Default switch</div>
+  </div>
+</ds-side-panel>

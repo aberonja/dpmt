@@ -1,10 +1,13 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { ISidePanelState } from './side-panel.model';
+import { sidePanelFeatureKey } from './side-panel.reducer';
 
-const getIsOpen = (state: ISidePanelState) => state.isOpen;
+const getState = (state: ISidePanelState) => state;
 
-const getSidePanel = createFeatureSelector<ISidePanelState>('sidePanel');
-export const getIsOpenSelector = createSelector(
+const getSidePanel = createFeatureSelector<ISidePanelState>(
+  sidePanelFeatureKey
+);
+export const getStateSelector = createSelector(
   getSidePanel,
-  getIsOpen
+  getState
 );

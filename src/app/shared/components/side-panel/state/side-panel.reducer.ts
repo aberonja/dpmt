@@ -2,10 +2,12 @@ import { createReducer, on } from '@ngrx/store';
 import { CloseSidePanel, OpenSidePanel } from './side-panel.actions';
 import { ISidePanelState } from './side-panel.model';
 
+export const sidePanelFeatureKey = 'sidePanel';
+
 const initialState: ISidePanelState = {
   isOpen: false,
   type: null,
-  id: null
+  id: null,
 };
 
 export const sidePanelReducer = createReducer(
@@ -14,7 +16,7 @@ export const sidePanelReducer = createReducer(
     ...state,
     isOpen: true,
     type,
-    id
+    id,
   })),
   on(CloseSidePanel, () => initialState)
 );
