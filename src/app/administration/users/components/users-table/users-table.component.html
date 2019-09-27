@@ -36,7 +36,6 @@
       </ds-table-header-col>
     </ds-table-row>
   </ds-table-header>
-
   <ds-table-body [loading]="false">
     <ds-table-row *ngFor="let item of items" (click)="openSidePanel(item.id)">
       <ds-table-cell column-key="index" class="pr-0">
@@ -46,39 +45,30 @@
           [checked]="item.checked"
         ></ds-checkbox>
       </ds-table-cell>
-
       <ds-table-cell column-key="empty">
         <span class="small"></span>
       </ds-table-cell>
-
       <ds-table-cell column-key="id">
         <span class="small">253305</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="itemName">
         <span class="small">Entrance stadium map</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="status">
         <span class="small">New item</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="briefer">
         <span class="small">Mat Jones</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="process">
         <span class="small">Brief</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="category">
         <span class="small">Maps</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="venue">
         <span class="small">Camp Nou</span>
       </ds-table-cell>
-
       <ds-table-cell column-key="deadline">
         <span class="small">05.10.2021</span>
       </ds-table-cell>
