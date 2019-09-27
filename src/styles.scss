@@ -27,3 +27,11 @@ body {
     }
   }
 }
+
+ds-side-panel.ds-side-panel.c-panel-side {
+  .c-side-panel--inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

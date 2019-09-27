@@ -1,12 +1,15 @@
 <ds-side-panel
-  class="h-100"
+  class="h-100 ds-side-panel"
   #sidepanel
   heading="Test heading"
-  text="Test text"
   (onClose)="onSidePanelClose()"
 >
-  <div [ngSwitch]="sidePanelType">
-    <app-user-edit *ngSwitchCase="'userEdit'" [id]="id"></app-user-edit>
+  <div [ngSwitch]="sidePanelType" class="side-panel-body">
+    <app-user-edit
+      *ngSwitchCase="'userEdit'"
+      [id]="id"
+      class="d-flex flex-column h-100"
+    ></app-user-edit>
     <app-club-create *ngSwitchCase="'clubCreate'"></app-club-create>
     <app-club-edit *ngSwitchCase="'clubEdit'" [id]="id"></app-club-edit>
     <app-material-create *ngSwitchCase="'materialCreate'"></app-material-create>
