@@ -1,17 +1,25 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { CloseSidePanel } from './state/side-panel.actions';
 import { ISidePanelState } from './state/side-panel.model';
-import { getIsOpenSelector } from './state/side-panel.selectors';
+import { getStateSelector } from './state/side-panel.selectors';
 
 @Component({
   selector: 'app-side-panel',
   templateUrl: './side-panel.component.html',
-  styleUrls: ['./side-panel.component.scss']
+  styleUrls: ['./side-panel.component.scss'],
 })
 export class SidePanelComponent implements OnInit, OnDestroy {
   isOpen$: Subscription;
+  sidePanelType: string;
+  id: number;
 
   @ViewChild('sidepanel', { static: false }) sidePanel: ElementRef<
     HTMLDsSidePanelElement
@@ -20,9 +28,11 @@ export class SidePanelComponent implements OnInit, OnDestroy {
   constructor(private _store: Store<{ ui: ISidePanelState }>) {}
 
   ngOnInit() {
-    this.isOpen$ = this._store.select(getIsOpenSelector).subscribe(isOpen => {
-      if (isOpen) {
+    this.isOpen$ = this._store.select(getStateSelector).subscribe(state => {
+      if (state.isOpen) {
         this.sidePanel.nativeElement.open();
+        this.sidePanelType = state.type;
+        this.id = state.id;
       }
     });
   }
