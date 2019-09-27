@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
 import { UsersComponent } from './container/users.component';
+import { UsersTableComponent } from './components/users-table/users-table.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { UsersComponent } from './container/users.component';
     ]),
     StoreModule.forFeature('users', {}),
   ],
-  declarations: [UsersComponent],
+  declarations: [UsersComponent, UsersTableComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class UsersModule {}
