@@ -1,5 +1,5 @@
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
 import { UsersComponent } from './container/users.component';
@@ -10,11 +10,12 @@ import { UsersComponent } from './container/users.component';
     RouterModule.forChild([
       {
         path: 'users',
-        component: UsersComponent
-      }
+        component: UsersComponent,
+      },
     ]),
-    StoreModule.forFeature('users', {})
+    StoreModule.forFeature('users', {}),
   ],
-  declarations: [UsersComponent]
+  declarations: [UsersComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class UsersModule {}

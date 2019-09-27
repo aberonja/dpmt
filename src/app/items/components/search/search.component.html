@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center w-25 pb-40">
   <ds-search-field
-    name="item-search"
-    placeholder="Search Items"
+    name="{{ phrase }}-search"
+    placeholder="Search {{ phrase }}"
     (onChange)="onSearch($event)"
   ></ds-search-field>
 </div>
