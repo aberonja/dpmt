@@ -21,7 +21,7 @@ import { ItemsModule } from './items/items.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProjectsModule } from './projects/projects.module';
 import { ModalComponent } from './shared/components/modal/modal.component';
-import { SidePanelComponent } from './shared/components/side-panel/side-panel.component';
+import { SidePanelModule } from './shared/components/side-panel/side-panel.module';
 import { TopHeaderComponent } from './shared/components/top-header/top-header.component';
 import { TemplatesModule } from './templates/templates.module';
 
@@ -30,7 +30,6 @@ import { TemplatesModule } from './templates/templates.module';
     AppComponent,
     NotFoundComponent,
     TopHeaderComponent,
-    SidePanelComponent,
     ModalComponent,
   ],
   imports: [
@@ -43,6 +42,7 @@ import { TemplatesModule } from './templates/templates.module';
     ItemsModule,
     TemplatesModule,
     ProjectsModule,
+    SidePanelModule,
     MaterialsModule,
     CategoriesModule,
     AuditLogsModule,
