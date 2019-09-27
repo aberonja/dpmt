@@ -10,12 +10,14 @@ import { MaterialEditComponent } from '@uefa-dptm/administration/materials/compo
 import { UserEditComponent } from '@uefa-dptm/administration/users/components/user-edit/user-edit.component';
 import { VenueCreateComponent } from '@uefa-dptm/administration/venues/components/venue-create/venue-create.component';
 import { VenueEditComponent } from '@uefa-dptm/administration/venues/components/venue-edit/venue-edit.component';
+import { SharedModule } from '@uefa-dptm/shared/shared.module';
 import { SidePanelComponent } from './side-panel.component';
 import * as fromSidePanel from './state/side-panel.reducer';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     StoreModule.forFeature(
       fromSidePanel.sidePanelFeatureKey,
       fromSidePanel.sidePanelReducer

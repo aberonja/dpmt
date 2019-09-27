@@ -1,4 +1,107 @@
-<p>
-  user-edit works! side panel ID:
-  {{ id }}
-</p>
+<form
+  [formGroup]="profileForm"
+  class="d-flex flex-column overflow-hidden"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="overflow-auto p-16">
+    <ds-input-field
+      name="id"
+      label="ID"
+      type="number"
+      placeholder="Enter ID"
+      required
+      [value]="profileForm.value.id"
+      (onChange)="updateValue($event.detail.value, 'id')"
+    ></ds-input-field>
+    <ds-input-field
+      name="firstName"
+      label="First name"
+      placeholder="Enter first name"
+      required
+      [value]="profileForm.value.firstName"
+      (onChange)="updateValue($event.detail.value, 'firstName')"
+    ></ds-input-field>
+    <ds-input-field
+      name="lastName"
+      label="Last name"
+      placeholder="Enter last name"
+      required
+      [value]="profileForm.value.lastName"
+      (onChange)="updateValue($event.detail.value, 'lastName')"
+    ></ds-input-field>
+    <ds-input-field
+      name="email"
+      label="Email"
+      placeholder="Enter email"
+      required
+      [value]="profileForm.value.email"
+      (onChange)="updateValue($event.detail.value, 'email')"
+    ></ds-input-field>
+    <ds-input-field
+      name="userPrincipalName"
+      label="User principal name"
+      placeholder="Enter User principal name"
+      required
+      [value]="profileForm.value.userPrincipalName"
+      (onChange)="updateValue($event.detail.value, 'userPrincipalName')"
+    ></ds-input-field>
+    <ds-input-field
+      name="organization"
+      label="Organization"
+      placeholder="Enter organization"
+      required
+      [value]="profileForm.value.organization"
+      (onChange)="updateValue($event.detail.value, 'organization')"
+    ></ds-input-field>
+    <ds-input-field
+      name="addressLine"
+      label="Addres line"
+      placeholder="Enter address line"
+      required
+      [value]="profileForm.value.addressLine"
+      (onChange)="updateValue($event.detail.value, 'addressLine')"
+    ></ds-input-field>
+    <ds-input-field
+      name="city"
+      label="City"
+      placeholder="Enter city"
+      required
+      [value]="profileForm.value.city"
+      (onChange)="updateValue($event.detail.value, 'city')"
+    ></ds-input-field>
+    <ds-hybrid-field
+      [loadedOptions]="countries"
+      name="country"
+      label="Country"
+      placeholder="Select country"
+      noresults="Sorry, there are no results"
+      required
+      [value]="profileForm.value.country.value"
+      (onSelect)="updateValue($event.detail.selected, 'country')"
+    >
+    </ds-hybrid-field>
+    <ds-input-field
+      name="phoneNumber"
+      label="Phone number"
+      placeholder="Enter phone number"
+      required
+      [value]="profileForm.value.phoneNumber"
+      (onChange)="updateValue($event.detail.value, 'phoneNumber')"
+    ></ds-input-field>
+    <ds-input-field
+      name="sapId"
+      label="SAP ID"
+      type="number"
+      placeholder="Enter SAP ID"
+      required
+      [value]="profileForm.value.sapId"
+      (onChange)="updateValue($event.detail.value, 'sapId')"
+    ></ds-input-field>
+  </div>
+  <div class="d-sm-flex justify-content-between p-16">
+    <ds-button appearance="secondary" (click)="onReset()"
+      >Revert changes</ds-button
+    >
+    <ds-button appearance="highlight">Save</ds-button>
+  </div>
+</form>
