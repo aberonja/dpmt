@@ -6,7 +6,7 @@
   (onClose)="onSidePanelClose()"
 >
   <div [ngSwitch]="sidePanelType">
-    <app-user-edit *ngSwitchCase="'item'" [id]="id"></app-user-edit>
+    <app-user-edit *ngSwitchCase="'userEdit'" [id]="id"></app-user-edit>
     <app-club-create *ngSwitchCase="'clubCreate'"></app-club-create>
     <app-club-edit *ngSwitchCase="'clubEdit'" [id]="id"></app-club-edit>
     <app-material-create *ngSwitchCase="'materialCreate'"></app-material-create>
