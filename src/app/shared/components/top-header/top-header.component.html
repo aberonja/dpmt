@@ -17,13 +17,12 @@
         <a class="mr-4" routerLink="/projects" routerLinkActive="active"
           >Projects</a
         >
-        <div class="d-flex">
-          <span
-            class="cursor-pointer"
-            [matMenuTriggerFor]="appMenu"
-            #matMenu="matMenuTrigger"
-            >Administration</span
-          >
+        <div
+          class="d-flex cursor-pointer"
+          [matMenuTriggerFor]="appMenu"
+          #matMenu="matMenuTrigger"
+        >
+          <span>Administration</span>
           <ds-icon
             [class.menu-open]="matMenu.menuOpen"
             name="navigation-triangle-down"
@@ -57,18 +56,30 @@
     <div class="header-block d-flex justify-content-end">
       <div class="d-flex align-items-center">
         <ds-icon class="mr-24" name="action-edit" color="neutral-0"></ds-icon>
-        <ds-avatar
-          class="mr-8"
-          type="image"
-          src="https://hips.hearstapps.com/esquireuk.cdnds.net/15/37/2048x2730/2048x2730-tom-hardy-esquire-may-cover-promo-11-jpg-4c8bc653.jpg?resize=480:*"
-        ></ds-avatar>
-        <span class="mr-28">Test User</span>
-        <ds-icon
-          class="mr-24"
-          name="navigation-triangle-down"
-          color="neutral-0"
-        ></ds-icon>
+        <div
+          class="d-flex cursor-pointer align-items-center"
+          [matMenuTriggerFor]="userMenu"
+          #userMatMenu="matMenuTrigger"
+        >
+          <ds-avatar
+            class="mr-8"
+            type="image"
+            src="https://hips.hearstapps.com/esquireuk.cdnds.net/15/37/2048x2730/2048x2730-tom-hardy-esquire-may-cover-promo-11-jpg-4c8bc653.jpg?resize=480:*"
+          ></ds-avatar>
+          <span class="mr-28">Test User</span>
+          <ds-icon
+            [class.menu-open]="userMatMenu.menuOpen"
+            class="mr-24"
+            name="navigation-triangle-down"
+            color="neutral-0"
+          ></ds-icon>
+        </div>
       </div>
+      <mat-menu #userMenu="matMenu" xPosition="before">
+        <div class="mat-menu">
+          <span class="p-20">User actions</span>
+        </div>
+      </mat-menu>
     </div>
   </div>
   <ds-page-header
