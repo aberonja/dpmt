@@ -22,7 +22,7 @@ body {
       border-bottom: none;
     }
 
-    a.active {
+    &.active {
       color: var(--secondary-0);
     }
   }
