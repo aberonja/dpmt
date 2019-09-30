@@ -10,6 +10,9 @@
       type="number"
       placeholder="Enter ID"
       required
+      [invalid]="
+        profileForm.controls.id.invalid && profileForm.controls.id.dirty
+      "
       [value]="profileForm.value.id"
       (onChange)="updateValue($event.detail.value, 'id')"
     ></ds-input-field>
@@ -18,6 +21,10 @@
       label="First name"
       placeholder="Enter first name"
       required
+      [invalid]="
+        profileForm.controls.firstName.invalid &&
+        profileForm.controls.firstName.dirty
+      "
       [value]="profileForm.value.firstName"
       (onChange)="updateValue($event.detail.value, 'firstName')"
     ></ds-input-field>
@@ -69,7 +76,8 @@
       [value]="profileForm.value.city"
       (onChange)="updateValue($event.detail.value, 'city')"
     ></ds-input-field>
-    <ds-hybrid-field
+    <!-- Hybrid filed is not working properly ATM, because it triggers onSelect event right after the initialization -->
+    <!-- <ds-hybrid-field
       [loadedOptions]="countries"
       name="country"
       label="Country"
@@ -79,7 +87,15 @@
       [value]="profileForm.value.country.value"
       (onSelect)="updateValue($event.detail.selected, 'country')"
     >
-    </ds-hybrid-field>
+    </ds-hybrid-field> -->
+    <ds-select
+      name="country"
+      label="Country"
+      placeholder="Select country"
+      [options]="countries"
+      [value]="profileForm.value.country.value"
+      (onChange)="updateValue($event.detail.selected, 'country')"
+    ></ds-select>
     <ds-input-field
       name="phoneNumber"
       label="Phone number"
@@ -99,9 +115,16 @@
     ></ds-input-field>
   </div>
   <div class="d-sm-flex justify-content-between p-16">
-    <ds-button appearance="secondary" (click)="onReset()"
+    <ds-button
+      appearance="secondary"
+      (click)="onReset()"
+      [disabled]="!profileForm.dirty"
       >Revert changes</ds-button
     >
-    <ds-button appearance="highlight">Save</ds-button>
+    <ds-button
+      appearance="highlight"
+      [disabled]="profileForm.invalid || !profileForm.dirty"
+      >Save</ds-button
+    >
   </div>
 </form>
