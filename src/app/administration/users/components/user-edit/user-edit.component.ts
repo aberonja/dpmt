@@ -11,7 +11,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   @Input() set id(id: number) {
     this.id$.next(id);
   }
-  private id$ = new BehaviorSubject<number>(undefined);
+  private id$ = new BehaviorSubject<number>(null);
   profileForm: FormGroup;
   //   Type this when backend creates model
   initialValue: any;
@@ -76,6 +76,15 @@ export class UserEditComponent implements OnInit, OnDestroy {
   }
 
   updateValue(value: string, field: string) {
+    if (Object.keys(value).length === 2) {
+      this.profileForm.patchValue({
+        [field]: { label: '', name: '', value: '' },
+      });
+      this.profileForm.controls[field].markAsPristine();
+
+      return;
+    }
+
     this.profileForm.controls[field].markAsDirty();
     this.profileForm.patchValue({ [field]: value });
   }

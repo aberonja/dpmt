@@ -1,8 +1,4 @@
-<form
-  [formGroup]="profileForm"
-  class="d-flex flex-column overflow-hidden"
-  (ngSubmit)="onSubmit()"
->
+<form [formGroup]="profileForm" class="d-flex flex-column overflow-hidden">
   <div class="overflow-auto p-16">
     <ds-input-field
       name="id"
@@ -33,6 +29,10 @@
       label="Last name"
       placeholder="Enter last name"
       required
+      [invalid]="
+        profileForm.controls.lastName.invalid &&
+        profileForm.controls.lastName.dirty
+      "
       [value]="profileForm.value.lastName"
       (onChange)="updateValue($event.detail.value, 'lastName')"
     ></ds-input-field>
@@ -41,6 +41,9 @@
       label="Email"
       placeholder="Enter email"
       required
+      [invalid]="
+        profileForm.controls.email.invalid && profileForm.controls.email.dirty
+      "
       [value]="profileForm.value.email"
       (onChange)="updateValue($event.detail.value, 'email')"
     ></ds-input-field>
@@ -49,6 +52,10 @@
       label="User principal name"
       placeholder="Enter User principal name"
       required
+      [invalid]="
+        profileForm.controls.userPrincipalName.invalid &&
+        profileForm.controls.userPrincipalName.dirty
+      "
       [value]="profileForm.value.userPrincipalName"
       (onChange)="updateValue($event.detail.value, 'userPrincipalName')"
     ></ds-input-field>
@@ -57,6 +64,10 @@
       label="Organization"
       placeholder="Enter organization"
       required
+      [invalid]="
+        profileForm.controls.organization.invalid &&
+        profileForm.controls.organization.dirty
+      "
       [value]="profileForm.value.organization"
       (onChange)="updateValue($event.detail.value, 'organization')"
     ></ds-input-field>
@@ -65,6 +76,10 @@
       label="Addres line"
       placeholder="Enter address line"
       required
+      [invalid]="
+        profileForm.controls.addressLine.invalid &&
+        profileForm.controls.addressLine.dirty
+      "
       [value]="profileForm.value.addressLine"
       (onChange)="updateValue($event.detail.value, 'addressLine')"
     ></ds-input-field>
@@ -73,11 +88,15 @@
       label="City"
       placeholder="Enter city"
       required
+      [invalid]="
+        profileForm.controls.city.invalid && profileForm.controls.city.dirty
+      "
       [value]="profileForm.value.city"
       (onChange)="updateValue($event.detail.value, 'city')"
     ></ds-input-field>
     <!-- Hybrid filed is not working properly ATM, because it triggers onSelect event right after the initialization -->
-    <!-- <ds-hybrid-field
+    <!-- Also, it triggers onSelect twice every time -->
+    <ds-hybrid-field
       [loadedOptions]="countries"
       name="country"
       label="Country"
@@ -87,20 +106,16 @@
       [value]="profileForm.value.country.value"
       (onSelect)="updateValue($event.detail.selected, 'country')"
     >
-    </ds-hybrid-field> -->
-    <ds-select
-      name="country"
-      label="Country"
-      placeholder="Select country"
-      [options]="countries"
-      [value]="profileForm.value.country.value"
-      (onChange)="updateValue($event.detail.selected, 'country')"
-    ></ds-select>
+    </ds-hybrid-field>
     <ds-input-field
       name="phoneNumber"
       label="Phone number"
       placeholder="Enter phone number"
       required
+      [invalid]="
+        profileForm.controls.phoneNumber.invalid &&
+        profileForm.controls.phoneNumber.dirty
+      "
       [value]="profileForm.value.phoneNumber"
       (onChange)="updateValue($event.detail.value, 'phoneNumber')"
     ></ds-input-field>
@@ -110,6 +125,9 @@
       type="number"
       placeholder="Enter SAP ID"
       required
+      [invalid]="
+        profileForm.controls.sapId.invalid && profileForm.controls.sapId.dirty
+      "
       [value]="profileForm.value.sapId"
       (onChange)="updateValue($event.detail.value, 'sapId')"
     ></ds-input-field>
@@ -123,6 +141,7 @@
     >
     <ds-button
       appearance="highlight"
+      (click)="onSubmit()"
       [disabled]="profileForm.invalid || !profileForm.dirty"
       >Save</ds-button
     >
