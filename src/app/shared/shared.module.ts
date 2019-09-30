@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from '@uefa-dptm/items/components/search/search.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { CapitalizePipe } from './pipes/capitalize/capitalize.pipe';
 import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
 
@@ -12,6 +13,7 @@ import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
     CapitalizePipe,
     SearchComponent,
     PaginationComponent,
+    SnackbarComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -22,6 +24,7 @@ import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
     CapitalizePipe,
     SearchComponent,
     PaginationComponent,
+    SnackbarComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
