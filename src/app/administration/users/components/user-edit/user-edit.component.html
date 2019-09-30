@@ -94,7 +94,7 @@
       [value]="profileForm.value.city"
       (onChange)="updateValue($event.detail.value, 'city')"
     ></ds-input-field>
-    <!-- Hybrid filed is not working properly ATM, because it triggers onSelect event right after the initialization -->
+    <!-- Hybrid field is not working properly ATM, because it triggers onSelect event right after the initialization -->
     <!-- Also, it triggers onSelect twice every time -->
     <ds-hybrid-field
       [loadedOptions]="countries"
