@@ -76,7 +76,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   }
 
   updateValue(value: string, field: string) {
-    if (Object.keys(value).length === 2) {
+    if (field === 'country' && Object.keys(value).length === 2) {
       this.profileForm.patchValue({
         [field]: { label: '', name: '', value: '' },
       });
