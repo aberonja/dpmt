@@ -66,7 +66,10 @@ export class ItemEditComponent implements OnInit, OnDestroy {
 
   updateValue(value: string, field: string) {
     //   Reseting hybrid field returns two keys instead of 3
-    if (Object.keys(value).length === 2) {
+    if (
+      (field === 'category' || field === 'project') &&
+      Object.keys(value).length === 2
+    ) {
       this.itemForm.patchValue({
         [field]: { label: '', name: '', value: '' },
       });

@@ -46,7 +46,10 @@ export class ItemCreateComponent {
   constructor() {}
 
   updateValue(value: string, field: string) {
-    if (Object.keys(value).length === 2) {
+    if (
+      (field === 'category' || field === 'project') &&
+      Object.keys(value).length === 2
+    ) {
       this.itemForm.patchValue({
         [field]: { label: '', name: '', value: '' },
       });
