@@ -31,7 +31,7 @@ export class SnackbarComponent implements OnInit, OnDestroy {
     this.snackBar$ = this._store
       .select(getIdSelector)
       .pipe(
-        mergeMap(_ =>
+        mergeMap(() =>
           this._store.select(getSnackBarStateSelector).pipe(take(1))
         )
       )
