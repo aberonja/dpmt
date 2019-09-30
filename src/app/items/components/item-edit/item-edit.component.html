@@ -1,0 +1,54 @@
+<form
+  [formGroup]="itemForm"
+  class="d-flex flex-column overflow-hidden flex-grow-1"
+>
+  <div class="overflow-auto p-16 flex-grow-1">
+    <!-- Hybrid field is not working properly ATM, because it triggers onSelect event right after the initialization -->
+    <!-- Also, it triggers onSelect twice every time -->
+    <ds-hybrid-field
+      [loadedOptions]="projects"
+      name="project"
+      label="Project"
+      placeholder="Select project"
+      noresults="Sorry, there are no results"
+      required
+      [value]="itemForm.value.project.value"
+      (onSelect)="updateValue($event.detail.selected, 'project')"
+    >
+    </ds-hybrid-field>
+    <ds-input-field
+      name="itemName"
+      label="Item"
+      placeholder="Enter item name"
+      required
+      [invalid]="itemForm.controls.name.invalid && itemForm.controls.name.dirty"
+      [value]="itemForm.value.name"
+      (onChange)="updateValue($event.detail.value, 'name')"
+    ></ds-input-field>
+    <ds-hybrid-field
+      [loadedOptions]="categories"
+      name="category"
+      label="Category"
+      placeholder="Select category"
+      noresults="Sorry, there are no results"
+      required
+      [value]="itemForm.value.category.value"
+      (onSelect)="updateValue($event.detail.selected, 'category')"
+    >
+    </ds-hybrid-field>
+  </div>
+  <div class="d-sm-flex justify-content-between p-16">
+    <ds-button
+      appearance="secondary"
+      (click)="onReset()"
+      [disabled]="!itemForm.dirty"
+      >Revert changes</ds-button
+    >
+    <ds-button
+      appearance="highlight"
+      (click)="onSubmit()"
+      [disabled]="itemForm.invalid || !itemForm.dirty"
+      >Save</ds-button
+    >
+  </div>
+</form>

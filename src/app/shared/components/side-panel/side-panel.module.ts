@@ -10,6 +10,8 @@ import { MaterialEditComponent } from '@uefa-dptm/administration/materials/compo
 import { UserEditComponent } from '@uefa-dptm/administration/users/components/user-edit/user-edit.component';
 import { VenueCreateComponent } from '@uefa-dptm/administration/venues/components/venue-create/venue-create.component';
 import { VenueEditComponent } from '@uefa-dptm/administration/venues/components/venue-edit/venue-edit.component';
+import { ItemCreateComponent } from '@uefa-dptm/items/components/item-create/item-create.component';
+import { ItemEditComponent } from '@uefa-dptm/items/components/item-edit/item-edit.component';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
 import { SidePanelComponent } from './side-panel.component';
 import * as fromSidePanel from './state/side-panel.reducer';
@@ -34,6 +36,8 @@ import * as fromSidePanel from './state/side-panel.reducer';
     CategoryEditComponent,
     VenueCreateComponent,
     VenueEditComponent,
+    ItemCreateComponent,
+    ItemEditComponent,
   ],
   exports: [SidePanelComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
