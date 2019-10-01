@@ -7,15 +7,17 @@ export const sidePanelFeatureKey = 'sidePanel';
 const initialState: ISidePanelState = {
   isOpen: false,
   type: null,
+  heading: null,
   id: null,
 };
 
 export const sidePanelReducer = createReducer(
   initialState,
-  on(OpenSidePanel, (state, { payload: { type, id } }) => ({
+  on(OpenSidePanel, (state, { payload: { type, id, heading } }) => ({
     ...state,
     isOpen: true,
     type,
+    heading,
     id,
   })),
   on(CloseSidePanel, () => initialState)

@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
+import { IRouteData } from './../shared/components/top-header/top-header.model';
 import { TableComponent } from './components/table/table.component';
 import { ItemsComponent } from './containers/items.component';
 
@@ -11,6 +12,10 @@ import { ItemsComponent } from './containers/items.component';
       {
         path: 'items',
         component: ItemsComponent,
+        data: {
+          heading: 'Add item',
+          type: 'itemCreate',
+        } as IRouteData,
       },
     ]),
   ],

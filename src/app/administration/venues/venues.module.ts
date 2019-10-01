@@ -1,7 +1,8 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
+import { IRouteData } from './../../shared/components/top-header/top-header.model';
 import { VenuesComponent } from './container/venues.component';
 
 @NgModule({
@@ -10,11 +11,15 @@ import { VenuesComponent } from './container/venues.component';
     RouterModule.forChild([
       {
         path: 'venues',
-        component: VenuesComponent
-      }
+        component: VenuesComponent,
+        data: {
+          heading: 'Add venue',
+          type: 'venueCreate',
+        } as IRouteData,
+      },
     ]),
-    StoreModule.forFeature('venues', {})
+    StoreModule.forFeature('venues', {}),
   ],
-  declarations: [VenuesComponent]
+  declarations: [VenuesComponent],
 })
 export class VenuesModule {}

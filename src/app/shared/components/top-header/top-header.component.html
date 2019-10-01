@@ -102,5 +102,7 @@
   </div>
   <ds-page-header
     [pageTitle]="routeUrl$ | async | urlFormatter | capitalize"
+    [highlightAction]="highlightAction.heading"
+    (onActionClick)="actionClick()"
   ></ds-page-header>
 </header>
