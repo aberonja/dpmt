@@ -10,4 +10,6 @@ const selectRouter = createFeatureSelector<
   fromRouter.RouterReducerState<any>
 >('router');
 
-export const { selectUrl } = fromRouter.getSelectors(selectRouter);
+export const { selectUrl, selectRouteData } = fromRouter.getSelectors(
+  selectRouter
+);

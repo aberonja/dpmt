@@ -24,6 +24,8 @@ export class TableComponent {
   constructor(private _store: Store<{ sidePanel: ISidePanelState }>) {}
 
   openSidePanel(id: number) {
-    this._store.dispatch(OpenSidePanel({ payload: { type: 'itemEdit', id } }));
+    this._store.dispatch(
+      OpenSidePanel({ payload: { type: 'itemEdit', heading: 'Edit item', id } })
+    );
   }
 }

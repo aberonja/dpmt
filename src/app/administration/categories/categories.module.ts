@@ -1,3 +1,4 @@
+import { IRouteData } from './../../shared/components/top-header/top-header.model';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
@@ -12,6 +13,10 @@ import * as fromCategories from './state/categories.reducer';
       {
         path: 'categories',
         component: CategoriesComponent,
+        data: {
+          heading: 'Add category',
+          type: 'categoryCreate',
+        } as IRouteData,
       },
     ]),
     StoreModule.forFeature(

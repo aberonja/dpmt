@@ -41,13 +41,13 @@
     <ds-button
       appearance="secondary"
       (click)="onReset()"
-      [disabled]="!profileForm.dirty"
+      [disabled]="!itemForm.dirty"
       >Revert changes</ds-button
     >
     <ds-button
       appearance="highlight"
       (click)="onSubmit()"
-      [disabled]="profileForm.invalid || !profileForm.dirty"
+      [disabled]="itemForm.invalid || !itemForm.dirty"
       >Save</ds-button
     >
   </div>
