@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
+import { IRouteData } from '@uefa-dptm/shared/components/top-header/top-header.model';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
-import { IRouteData } from './../../shared/components/top-header/top-header.model';
+import { VenuesTableComponent } from './components/venues-table/venues-table.component';
 import { VenuesComponent } from './container/venues.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { VenuesComponent } from './container/venues.component';
     ]),
     StoreModule.forFeature('venues', {}),
   ],
-  declarations: [VenuesComponent],
+  declarations: [VenuesComponent, VenuesTableComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class VenuesModule {}

@@ -1,0 +1,103 @@
+<ds-table class="mb-40">
+  <ds-table-header>
+    <ds-table-row>
+      <ds-table-header-col column-key="venue_code" width="15" flexible="true">
+        <span class="font-weight-bolder">Venue code</span>
+      </ds-table-header-col>
+      <ds-table-header-col column-key="id" width="5" flexible="true">
+        <span class="font-weight-bolder">ID</span>
+      </ds-table-header-col>
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="stadium_name"
+        width="30"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="font-weight-bolder">Stadium name</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
+      </ds-table-header-col>
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="city"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="font-weight-bolder">City</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
+      </ds-table-header-col>
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="country"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="font-weight-bolder">Country</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
+      </ds-table-header-col>
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="status"
+        width="15"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        >
+          <span class="font-weight-bolder">Status</span>
+          <ds-icon name="navigation-triangle-down" color="neutral-20"></ds-icon>
+        </div>
+      </ds-table-header-col>
+      <ds-table-header-col
+        class="carrot-holder"
+        column-key="delete"
+        width="5"
+        flexible="true"
+      >
+        <div
+          class="d-flex w-100 flex-1 cursor-pointer justify-content-between align-items-center"
+        ></div>
+      </ds-table-header-col>
+    </ds-table-row>
+  </ds-table-header>
+  <ds-table-body [loading]="false">
+    <ds-table-row *ngFor="let item of items" (click)="openSidePanel(item.id)">
+      <ds-table-cell column-key="venue_code">
+        <span class="small">G2_HER_MCH</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="id">
+        <span class="small">{{ item.id }}</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="stadium_name">
+        <span class="small">Rajko Mitic</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="city">
+        <span class="small">Belgrade</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="country">
+        <span class="small">Serbia</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="status">
+        <span class="small">Active</span>
+      </ds-table-cell>
+      <ds-table-cell column-key="delete" class="justify-content-center">
+        <ds-icon
+          (click)="openDialog($event)"
+          name="action-delete"
+          class="cursor-pointer"
+        ></ds-icon>
+      </ds-table-cell>
+    </ds-table-row>
+  </ds-table-body>
+</ds-table>

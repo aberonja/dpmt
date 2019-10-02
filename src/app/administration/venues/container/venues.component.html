@@ -1,3 +1,8 @@
-<p>
-  venues works!
-</p>
+<div class="px-20">
+  <div class="d-flex justify-content-between">
+    <app-search phrase="venues"></app-search>
+    <ds-button appearance="secondary" (click)="openFilters()">Filter</ds-button>
+  </div>
+  <app-venues-table></app-venues-table>
+  <app-pagination></app-pagination>
+</div>

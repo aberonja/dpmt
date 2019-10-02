@@ -15,7 +15,15 @@ export class ItemsComponent {
 
   openDialog() {
     this._store.dispatch(
-      OpenModal({ payload: { type: 'confirmationModal', id: 1 } })
+      OpenModal({
+        payload: {
+          type: 'default',
+          id: 1,
+          heading: 'heading',
+          text: 'text',
+          primaryAction: 'action',
+        },
+      })
     );
 
     this._store.dispatch(
