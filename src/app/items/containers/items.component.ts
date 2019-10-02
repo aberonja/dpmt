@@ -17,7 +17,7 @@ export class ItemsComponent {
     this._store.dispatch(
       OpenModal({
         payload: {
-          type: 'default ',
+          type: 'default',
           id: 1,
           heading: 'heading',
           text: 'text',
