@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
+import { IRouteData } from './../shared/components/top-header/top-header.model';
 import { TemplatesComponent } from './templates.component';
 
 @NgModule({
@@ -9,10 +10,14 @@ import { TemplatesComponent } from './templates.component';
     RouterModule.forChild([
       {
         path: 'templates',
-        component: TemplatesComponent
-      }
-    ])
+        component: TemplatesComponent,
+        data: {
+          heading: 'Add template',
+          type: 'templateCreate',
+        } as IRouteData,
+      },
+    ]),
   ],
-  declarations: [TemplatesComponent]
+  declarations: [TemplatesComponent],
 })
 export class TemplatesModule {}

@@ -20,6 +20,7 @@ export class SidePanelComponent implements OnInit, OnDestroy {
   isOpen$: Subscription;
   sidePanelType: string;
   id: number;
+  heading: string;
 
   @ViewChild('sidepanel', { static: false }) sidePanel: ElementRef<
     HTMLDsSidePanelElement
@@ -33,6 +34,7 @@ export class SidePanelComponent implements OnInit, OnDestroy {
         this.sidePanel.nativeElement.open();
         this.sidePanelType = state.type;
         this.id = state.id;
+        this.heading = state.heading;
       }
     });
   }

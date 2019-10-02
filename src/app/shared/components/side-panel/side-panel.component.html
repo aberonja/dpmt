@@ -1,8 +1,8 @@
 <ds-side-panel
   class="h-100 ds-side-panel"
-  #sidepanel
-  heading="Test heading"
+  [heading]="heading"
   (onClose)="onSidePanelClose()"
+  #sidepanel
 >
   <div [ngSwitch]="sidePanelType" class="side-panel-body h-100">
     <app-user-edit
@@ -24,7 +24,10 @@
     ></app-category-edit>
     <app-venue-create *ngSwitchCase="'venueCreate'"></app-venue-create>
     <app-venue-edit *ngSwitchCase="'venueEdit'" [id]="id"></app-venue-edit>
-    <app-item-create *ngSwitchCase="'itemCreate'"></app-item-create>
+    <app-item-create
+      class="h-100 d-flex flex-column"
+      *ngSwitchCase="'itemCreate'"
+    ></app-item-create>
     <app-item-edit
       class="h-100 d-flex flex-column"
       *ngSwitchCase="'itemEdit'"
