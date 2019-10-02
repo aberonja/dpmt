@@ -30,6 +30,10 @@
       *ngSwitchCase="'itemEdit'"
       [id]="id"
     ></app-item-edit>
+    <app-history
+      *ngSwitchCase="'historyHere'"
+      class="d-flex flex-column h-100"
+    ></app-history>
     <div *ngSwitchDefault>Default switch</div>
   </div>
 </ds-side-panel>
