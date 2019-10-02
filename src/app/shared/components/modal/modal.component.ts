@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { CloseModal } from './state/modal.actions';
 import { IModalState } from './state/modal.model';
-import { getIsOpenSelector } from './state/modal.selectors';
+import { getStateSelector } from './state/modal.selectors';
 
 @Component({
   selector: 'app-modal',
@@ -12,16 +12,14 @@ import { getIsOpenSelector } from './state/modal.selectors';
 })
 export class ModalComponent implements OnInit, OnDestroy {
   dialogSub$: Subscription;
-  isOpen: boolean = false;
+  state: IModalState;
 
   constructor(private _store: Store<{ modal: IModalState }>) {}
 
   ngOnInit() {
-    this.dialogSub$ = this._store
-      .select(getIsOpenSelector)
-      .subscribe(isOpen => {
-        this.isOpen = isOpen;
-      });
+    this.dialogSub$ = this._store.select(getStateSelector).subscribe(state => {
+      this.state = state;
+    });
   }
 
   ngOnDestroy() {
@@ -29,10 +27,14 @@ export class ModalComponent implements OnInit, OnDestroy {
   }
 
   openDialog() {
-    this.isOpen = true;
+    this.state.isOpen = true;
   }
 
   onDialogCancel() {
     this._store.dispatch(CloseModal());
+  }
+
+  primaryAction() {
+    console.log('primary action dispatch goes here');
   }
 }

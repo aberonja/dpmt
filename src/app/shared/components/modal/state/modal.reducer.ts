@@ -6,15 +6,24 @@ const initialState: IModalState = {
   isOpen: false,
   type: null,
   id: null,
+  heading: null,
+  text: null,
+  primaryAction: null,
 };
 
 export const modalReducer = createReducer(
   initialState,
-  on(OpenModal, (state, { payload: { type, id } }) => ({
-    ...state,
-    isOpen: true,
-    type,
-    id,
-  })),
-  on(CloseModal, () => initialState)
+  on(
+    OpenModal,
+    (state, { payload: { type, id, heading, text, primaryAction } }) => ({
+      ...state,
+      isOpen: true,
+      type,
+      id,
+      heading,
+      text,
+      primaryAction,
+    })
+  ),
+  on(CloseModal, state => ({ ...state, isOpen: false }))
 );

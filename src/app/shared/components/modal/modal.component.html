@@ -1,14 +1,14 @@
 <ds-dialog
-  type="default"
-  heading="Review agreement"
-  primary-action="Review"
+  [type]="state.type"
+  [heading]="state.heading"
+  [primaryAction]="state.primaryAction"
   secondary-action="Cancel"
-  [isOpen]="isOpen"
+  [isOpen]="state.isOpen"
   [confirmLoading]="isProcessing"
+  (onConfirm)="primaryAction()"
   (onCancel)="onDialogCancel()"
 >
   <p>
-    One more thing… you just need to review and accept the agreement to
-    officialy become a volunteer.
+    {{ state.text }}
   </p>
 </ds-dialog>
