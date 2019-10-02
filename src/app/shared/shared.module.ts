@@ -5,6 +5,7 @@ import { SearchComponent } from '@uefa-dptm/items/components/search/search.compo
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { CapitalizePipe } from './pipes/capitalize/capitalize.pipe';
+import { SetIconPipe } from './pipes/setIcon/set-icon.pipe';
 import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
     SearchComponent,
     PaginationComponent,
     SnackbarComponent,
+    SetIconPipe,
   ],
   imports: [CommonModule],
   exports: [
@@ -25,6 +27,7 @@ import { UrlFormatterPipe } from './pipes/url-formatter/url-formatter.pipe';
     SearchComponent,
     PaginationComponent,
     SnackbarComponent,
+    SetIconPipe,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

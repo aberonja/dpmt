@@ -13,6 +13,7 @@ import { VenueEditComponent } from '@uefa-dptm/administration/venues/components/
 import { ItemCreateComponent } from '@uefa-dptm/items/components/item-create/item-create.component';
 import { ItemEditComponent } from '@uefa-dptm/items/components/item-edit/item-edit.component';
 import { SharedModule } from '@uefa-dptm/shared/shared.module';
+import { HistoryComponent } from './../../../items/components/history/history.component';
 import { SidePanelComponent } from './side-panel.component';
 import * as fromSidePanel from './state/side-panel.reducer';
 
@@ -38,6 +39,7 @@ import * as fromSidePanel from './state/side-panel.reducer';
     VenueEditComponent,
     ItemCreateComponent,
     ItemEditComponent,
+    HistoryComponent,
   ],
   exports: [SidePanelComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

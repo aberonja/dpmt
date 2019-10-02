@@ -1,0 +1,15 @@
+<ds-item *ngFor="let item of items">
+  <ds-item-before>
+    <ds-avatar
+      type="icon"
+      icon-color="primary-0"
+      iconName="{{ item.action | setIcon }}"
+      with-action
+    ></ds-avatar>
+  </ds-item-before>
+  <ds-item-content
+    headline="Brief {{ item.action }}"
+    text="by {{ item.performer }}"
+    caption="{{ item.date }}"
+  ></ds-item-content>
+</ds-item>
