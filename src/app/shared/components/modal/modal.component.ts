@@ -26,10 +26,6 @@ export class ModalComponent implements OnInit, OnDestroy {
     this.dialogSub$.unsubscribe();
   }
 
-  openDialog() {
-    this.state.isOpen = true;
-  }
-
   onDialogCancel() {
     this._store.dispatch(CloseModal());
   }
